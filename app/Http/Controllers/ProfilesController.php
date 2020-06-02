@@ -14,11 +14,9 @@ class ProfilesController extends Controller
      */
     public function index($user)
     {
-        $user = User::where('username', $user)->first();
         // TODO: If not find go to 404 page
+        $user = User::where('username', $user)->first();
 
-        return view('profile', [
-            'user' => $user,
-        ]);
+        return view('profiles.index', compact('user'));
     }
 }
