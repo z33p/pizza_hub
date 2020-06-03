@@ -18,5 +18,12 @@ class ProductSeeder extends Seeder
             'caption' => 'a very delicious pizza',
             'price' => 20.0
         ]);
+
+        DB::table('products')->insert([
+            'name' => 'Pizza Animation',
+            'figure' => '/storage/pizza.jpg',
+            'caption' => 'a very delicious pizza',
+            'price' => 25.0
+        ]);
     }
 }

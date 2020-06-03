@@ -13,5 +13,6 @@ class FlavorProductSeeder extends Seeder
     public function run()
     {
         DB::table('flavor_product')->insert(['flavor_id' => 1, 'product_id' => 1]);
+        DB::table('flavor_product')->insert(['flavor_id' => 1, 'product_id' => 2]);
     }
 }
