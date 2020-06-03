@@ -12,11 +12,11 @@ class ProfilesController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($user)
+    public function show($user)
     {
         // TODO: If not find go to 404 page
         $user = User::where('username', $user)->first();
 
-        return view('profiles.index', compact('user'));
+        return view('profiles.show', compact('user'));
     }
 }

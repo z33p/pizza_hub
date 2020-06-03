@@ -17,10 +17,10 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::post('/carts/push', 'CartsController@push')->name('carts.push');
+Route::post('/carts/push/product', 'CartsController@push')->name('carts.push');
 
 Route::get('/home', 'HomeController@show');
 
-Route::get('/profiles/{user}', 'ProfilesController@index')->name('profiles.index');
+Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show');
 
 Auth::routes();
