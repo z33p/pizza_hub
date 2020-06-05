@@ -17,10 +17,15 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::post('/carts/push/product', 'CartsController@push')->name('carts.push');
+Auth::routes();
 
 Route::get('/home', 'HomeController@show');
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show');
+Route::get('/profiles/cart/products', 'ProfilesController@showCartProducts')->name('profiles.showCartProducts');
 
-Auth::routes();
+Route::post('/carts/push/product', 'CartsController@push')->name('carts.push');
+
+Route::post('/orders', 'OrdersController@store')->name('orders.store');
+
+Route::get('/products', 'ProductsController@index')->name('products.index');

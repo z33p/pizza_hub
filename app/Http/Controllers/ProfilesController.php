@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -18,5 +23,10 @@ class ProfilesController extends Controller
         $user = User::where('username', $user)->first();
 
         return view('profiles.show', compact('user'));
+    }
+
+    public function showCartProducts()
+    {
+        return auth()->user()->with('cart.products')->get()[0];
     }
 }
