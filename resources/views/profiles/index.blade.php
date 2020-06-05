@@ -22,7 +22,7 @@
                 <div class="col-md-4">
                     <div class="row card">
                         <div class="card-body p-4">
-                            @for ($i = 0; $i < count($order->products); $i++)
+                            @for ($i = 0; $i < $order->products->count(); $i++)
                                 <h3 class="card-title">Order {{ $i + 1 }}</h3>
                                 <p class="card-text">
                                     <span>{{ $order->products[$i]->name }},</span>
