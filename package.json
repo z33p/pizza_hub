@@ -27,7 +27,7 @@
         "bootstrap": "^4.0.0",
         "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "^2.0.1",
-        "commitizen": "^4.1.2",
+        "commitizen": "^4.3.0",
         "cross-env": "^7.0",
         "husky": "^4.2.5",
         "jquery": "^3.2",
